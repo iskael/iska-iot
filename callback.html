@@ -1,0 +1,13 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Autorización · Iska IoT</title><link rel="icon" href="logo.png"><link rel="stylesheet" href="estilo.css"></head><body><main class="centro">
+<img class="logo" src="logo.png" alt="Iska IoT">
+<h1>Autorización recibida</h1>
+<p id="msg">Copia el código de abajo y pégaselo a la herramienta Iska IoT Publicador.</p>
+<p><code id="code" style="font-size:1.1rem;word-break:break-all;background:#0b1430;padding:12px;border-radius:10px;display:block"></code></p>
+<p><a href="./">← Iska IoT</a></p>
+<script>
+const q = new URLSearchParams(location.search);
+const c = q.get("code"); const e = q.get("error_description") || q.get("error");
+document.getElementById("code").textContent = c || ("Error: " + (e || "no llegó ningún código"));
+</script>
+</main></body></html>
